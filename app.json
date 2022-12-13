@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "appAstronSky",
+    "slug": "appAstronSky",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
