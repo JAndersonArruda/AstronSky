@@ -12,6 +12,7 @@
     "@expo/webpack-config": "^0.17.2",
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.6",
+    "axios": "^1.2.2",
     "expo": "~47.0.8",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",

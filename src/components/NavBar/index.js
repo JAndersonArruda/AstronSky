@@ -17,25 +17,9 @@ const NavBar = () => {
                 </Pressable>
             </View>
             <View style={styles.areaNavItens}>
-                <Pressable onPress={() => navigation.navigate('News')}>
-                    <Image 
-                        source={require('../../../assets/news.png')}
-                        style={styles.imagem}
-                    />
-                </Pressable>
-            </View>
-            <View style={styles.areaNavItens}>
                 <Pressable onPress={() => navigation.navigate('Galerie')}>
                     <Image 
                         source={require('../../../assets/galerie.png')}
-                        style={styles.imagem}
-                    />
-                </Pressable>
-            </View>
-            <View style={styles.areaNavItens}>
-                <Pressable onPress={() => navigation.navigate('Profile')}>
-                    <Image 
-                        source={require('../../../assets/profile.png')}
                         style={styles.imagem}
                     />
                 </Pressable>

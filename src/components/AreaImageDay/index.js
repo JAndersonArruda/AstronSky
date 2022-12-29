@@ -1,12 +1,32 @@
-import { View, SafeAreaView } from 'react-native';
-import React from 'react';
+import { View, Image } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import { styles } from './styles';
 
+
+
 const AreaImageDay = () => {
+    const [imageUrl, setImageUrl] = useState(null);
+
+    useEffect(() => {
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=9pNRkT9uaF65RmA6K1Me0ngehhhFEItOeLp67lrb`)
+        .then(Response => {
+            setImageUrl(Response.data.url);
+        })
+        .catch(error => {
+            console.error(error);
+        })
+    }, [])
+
     return (
         <View style={styles.container}>
-            <SafeAreaView style={styles.containerImage}></SafeAreaView>
+            {imageUrl && (
+                <Image
+                    source={{ uri: imageUrl }}
+                    style={styles.containerImage}
+                />
+            )}
         </View>
   )
 }
