@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     areaSearch: {
         backgroundColor: '#D9D9D9',
+        color: '#C1C1C1',
         width: 230,
         height: 35,
         marginTop: 39,

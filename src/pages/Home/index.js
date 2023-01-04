@@ -20,6 +20,7 @@ const Home = () => {
                         source={require('../../../assets/logo-home.png')}
                     />
                 </View>
+                
                 <Search />
             </View> 
             <View style={styles.edentText}>

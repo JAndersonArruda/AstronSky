@@ -5,12 +5,13 @@ import axios from 'axios';
 import { styles } from './styles';
 
 
+const API_KEY = 'DxG7EhjRS3oY1qBDoFS5xBsk6QjhDIwb4GUGIHpC';
 
 const AreaImageDay = () => {
     const [imageUrl, setImageUrl] = useState(null);
 
     useEffect(() => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=9pNRkT9uaF65RmA6K1Me0ngehhhFEItOeLp67lrb`)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
         .then(Response => {
             setImageUrl(Response.data.url);
         })

@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import NavBar from '../../components/NavBar';
 import ImageGalerie from '../../components/ImageGalerie';
 
+
 const Galerie = () => {
     const navigation = useNavigation();
     const screenWidth = Dimensions.get('window').width;
@@ -39,12 +40,6 @@ const Galerie = () => {
                 <Text style={styles.textSecao}>Galeria</Text>
             </View>
 
-            <ImageGalerie />
-            <ImageGalerie />
-            <ImageGalerie />
-            <ImageGalerie />
-            <ImageGalerie />
-            <ImageGalerie />
             <ImageGalerie />
 
             <NavBar />
