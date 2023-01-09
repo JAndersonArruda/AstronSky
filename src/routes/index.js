@@ -2,7 +2,9 @@ import React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
 const Stack = createNativeStackNavigator();
+
 import Preload from '../pages/Preload';
 import SigIn from '../pages/SigIn';
 import SigUp from '../pages/SigUp';

@@ -5,27 +5,26 @@ import axios from 'axios';
 
 import { styles } from './styles';
 
-// ainda não funciona ==> erro de requisição não encontrada
+// ainda não funciona ==> erro de indefinição de parametro 'items' ---> linha 22
 
 const API_KEY = 'DxG7EhjRS3oY1qBDoFS5xBsk6QjhDIwb4GUGIHpC';
 
-const fetchImages = (query) => {
-    return axios.get(`https://images-api.nasa.gov/search?q=${query}&media_type=image&api_key=${API_KEY}`);
+const fechImagens = (query) => {
+    return axios.get(`https://images.nasa.gov/search?q=${query}&api_key=${API_KEY}`)
 }
-
 
 const ImageGalerie = () => {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
-        fetchImages('mars')
-        .then((response) => {
-            setImages(response.data.collection.items);
+        fechImagens('mars')
+        .then((Response) => {
+            setImages(Response.data.collection.items);
         })
         .catch(error => {
             console.error(error);
         })
-    }, []);  // Chame a função fetchImages assim que a página é carregada
+    }, []);
 
     return (
         <FlatList
@@ -33,7 +32,7 @@ const ImageGalerie = () => {
             renderItem={({ item }) => (
                 <Image
                     source={{ uri: item.links[0].href }}
-                    style={{ width: 200, height: 200 }}
+                    style={{ width: 93, height: 74 }}
                 />
             )}
             keyExtractor={(item) => item.nasa_id}
