@@ -1,4 +1,4 @@
-import { FlatList, Image } from 'react-native';
+import { FlatList, Image, View, Text } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -14,28 +14,34 @@ const fechImagens = (query) => {
 }
 
 const ImageGalerie = () => {
-    const [images, setImages] = useState([]);
+    const [photos, setPhotos] = useState([]);
 
     useEffect(() => {
-        fechImagens('mars')
-        .then((Response) => {
-            setImages(Response.data.collection.items);
-        })
-        .catch(error => {
-            console.error(error);
-        })
+        axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=${API_KEY}`)
+            .then((Response) => {
+                setPhotos(Response.data.photos);
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }, []);
 
     return (
         <FlatList
-            data={images}
+            data={photos}
             renderItem={({ item }) => (
-                <Image
-                    source={{ uri: item.links[0].href }}
-                    style={{ width: 93, height: 74 }}
-                />
+                <View>
+                    <Image source={{ uri: item.img_src }} style={{width: 93, height: 74}} />
+                    <Text>{item.id}</Text>
+                    <Text>{item.camera.name}</Text>
+                    <Text>{item.rover.name}</Text>
+                </View>
+                // <Image
+                //     source={{ uri: item.links[0].href }}
+                //     style={{ width: 93, height: 74 }}
+                // />
             )}
-            keyExtractor={(item) => item.nasa_id}
+            keyExtractor={item => item.id}
         />
     );
 }
