@@ -18,7 +18,7 @@ const AreaImageDay = () => {
         .catch(error => {
             console.error(error);
         })
-    }, [])
+    }, []);
 
     return (
         <View style={styles.container}>
