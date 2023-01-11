@@ -1,4 +1,4 @@
-import { View, Image } from 'react-native';
+import { View, Image, Text } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -8,12 +8,12 @@ import { styles } from './styles';
 const API_KEY = 'DxG7EhjRS3oY1qBDoFS5xBsk6QjhDIwb4GUGIHpC';
 
 const AreaImageDay = () => {
-    const [imageUrl, setImageUrl] = useState(null);
+    const [imageData, setImageData] = useState(null);
 
     useEffect(() => {
         axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
         .then(Response => {
-            setImageUrl(Response.data.url);
+            setImageData(Response.data);
         })
         .catch(error => {
             console.error(error);
@@ -22,14 +22,14 @@ const AreaImageDay = () => {
 
     return (
         <View style={styles.container}>
-            {imageUrl && (
-                <Image
-                    source={{ uri: imageUrl }}
-                    style={styles.containerImage}
-                />
+            {imageData && (
+                <>
+                    <Image source={{ uri: imageData.url }} style={styles.containerImage} />
+                    <Text style={styles.fonte}>{imageData.title}</Text>
+                </> 
             )}
         </View>
-  )
+    )
 }
 
 export default AreaImageDay

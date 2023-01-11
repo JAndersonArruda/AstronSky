@@ -30,10 +30,6 @@ const ImageGalerie = () => {
                 <View style={styles.container}>
                     <Image source={{ uri: item.links[0].href }} style={styles.containerImageOne} />                    
                 </View>
-                // <Image
-                //     source={{ uri: item.links[0].href }}
-                //     style={{ width: 93, height: 74 }}
-                // />
             )}
             keyExtractor={item => item.id_nasa}
         />

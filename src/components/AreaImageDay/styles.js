@@ -7,8 +7,14 @@ export const styles = StyleSheet.create({
     containerImage: {
         width: 330,
         height: 520,
-        marginTop: 9,
+        marginTop: 8,
         borderRadius: 20,
         marginLeft: 16,
+    },
+    fonte: {
+        color: '#19BDA1',
+        fontStyle: 'italic',
+        textAlign: 'center',
+        marginTop: 2,
     }
 })
