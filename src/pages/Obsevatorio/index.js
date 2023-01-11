@@ -39,7 +39,7 @@ const Observatorio = () => {
                     style={styles.imageSecao}
                     source={require('../../../assets/galerie-icon.png')}
                 />
-                <Text style={styles.textSecao}>Imagens de Marte</Text>
+                <Text style={styles.textSecao}>Observatorio</Text>
             </View>
 
             <ImageObservatory />

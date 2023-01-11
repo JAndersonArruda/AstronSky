@@ -11,10 +11,13 @@ const API_KEY = 'DxG7EhjRS3oY1qBDoFS5xBsk6QjhDIwb4GUGIHpC';
 const ImageObservatory = () => {
     const [photos, setPhotos] = useState([]);
 
+    // const [imagens, setImagens] = useState([]);
+
     useEffect(() => {
-        axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=${API_KEY}`)
+        axios.get(`https://images-api.nasa.gov/search?q=solar%20system&media_type=image`)
             .then((Response) => {
-                setPhotos(Response.data.photos);
+                console.log(Response)
+                setPhotos(Response.data.collection.items);
             })
             .catch(error => {
                 console.log(error);
@@ -27,15 +30,10 @@ const ImageObservatory = () => {
             numColumns={3}
             renderItem={({ item }) => (
                 <View style={styles.container}>
-                    <Image source={{ uri: item.img_src }} style={styles.containerImageOne} />
-                    <View style={styles.text}>
-                        <Text>{item.id}</Text>
-                        <Text>{item.camera.name}</Text>
-                        <Text>{item.rover.name}</Text>
-                    </View>
+                    <Image source={{ uri: item.links[0].href }} style={styles.containerImageOne} />  
                 </View>
             )}
-            keyExtractor={item => item.id}
+            keyExtractor={item => item.id_nasa}
         />
     );
 }

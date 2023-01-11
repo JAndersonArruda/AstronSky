@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
         padding: 13,
         width: '100%',
         height: 47,
-        marginTop: 10,
+        marginTop: 2,
     },
     areaNavItens: {
         flex: 1,

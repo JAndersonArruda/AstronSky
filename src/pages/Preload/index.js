@@ -14,7 +14,7 @@ const Preload = () => {
                 source={require('../../../assets/logo-white.png' )}
                 style={styles.imagem}
             />
-            <Pressable onPress={() => navigation.navigate('SigIn')}>
+            <Pressable onPress={() => navigation.navigate('Home')}>
                 <Image
                     source={require('../../../assets/preload.png' )}
                     style={styles.imagemNext}

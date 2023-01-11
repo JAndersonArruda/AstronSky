@@ -22,17 +22,8 @@ const Home = () => {
                 </View>
                 
                 <Search />
-            </View> 
-            <View style={styles.edentText}>
-                <Image
-                    style={styles.imageSecao}
-                    source={require('../../../assets/trend.png')}
-                />
-                <Text style={styles.textSecao}>Trend</Text>
             </View>
                 
-            <AreaViewHome />
-
             <View style={styles.edentText}>
                 <Image
                     style={styles.imageSecao}

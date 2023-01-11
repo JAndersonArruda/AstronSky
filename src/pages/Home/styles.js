@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
     edentText: {
         flexDirection: 'row',
         marginLeft: 40,
-        marginTop: 45,
+        marginTop: 50,
         marginBottom: 5,
     },
     textSecao: {
