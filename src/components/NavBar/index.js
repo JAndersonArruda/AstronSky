@@ -24,6 +24,14 @@ const NavBar = () => {
                     />
                 </Pressable>
             </View>
+            <View style={styles.areaNavItens}>
+                <Pressable onPress={() => navigation.navigate('Observatorio')}>
+                    <Image 
+                        source={require('../../../assets/astronomy_icon.png')}
+                        style={styles.imagem}
+                    />
+                </Pressable>
+            </View>
         </View>
     )
 }

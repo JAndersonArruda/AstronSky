@@ -12,6 +12,7 @@ import SigIn from '../pages/SigIn';
 import SigUp from '../pages/SigUp';
 import Home from '../pages/Home';
 import Galerie from '../pages/Galerie';
+import Observatorio from '../pages/Obsevatorio';
 import News from '../pages/News';
 import Profile from '../pages/Profile';
 import EditProfile from '../pages/EditProfile';
@@ -33,6 +34,7 @@ const AppRoutes = () => {
                 <Stack.Screen name='SigUp' component={SigUp} />
                 <Stack.Screen name='Home' component={Home} />
                 <Stack.Screen name='Galerie' component={Galerie} />
+                <Stack.Screen name='Observatorio' component={Observatorio} />
             </Stack.Navigator>
         </NavigationContainer>
     )

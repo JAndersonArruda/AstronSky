@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
+        marginBottom: 25,
     },
     containerImage: {
         width: 300,
