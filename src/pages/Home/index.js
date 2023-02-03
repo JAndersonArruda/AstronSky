@@ -1,12 +1,10 @@
 import { Text, View, Image, Dimensions, ScrollView } from 'react-native';
 import React from 'react';
-
 import { styles } from './styles';
 import NavBar from '../../components/NavBar';
 import Search from '../../components/Search';
 import AreaViewHome from '../../components/AreaViewHome';
 import AreaImageDay from '../../components/AreaImageDay';
-
 
 const Home = () => {
     const screenWidth = Dimensions.get('window').width;
@@ -20,10 +18,9 @@ const Home = () => {
                         source={require('../../../assets/logo-home.png')}
                     />
                 </View>
-                
+
                 <Search />
-            </View>
-                
+            </View>  
             <View style={styles.edentText}>
                 <Image
                     style={styles.imageSecao}
@@ -34,9 +31,7 @@ const Home = () => {
 
             <AreaImageDay />
 
-
             <NavBar />
-            
         </View>
     )
 }

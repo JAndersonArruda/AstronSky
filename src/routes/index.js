@@ -18,13 +18,6 @@ import Profile from '../pages/Profile';
 import EditProfile from '../pages/EditProfile';
 
 
-// const MainTab = () => {
-//     <Tab.Navigator initialRouteName='Home'>
-//         <Tab.Screen name='Home' component={Home} />
-//         <Tab.Screen name='Galerie' component={Galerie} />
-//     </Tab.Navigator>
-// }
-
 const AppRoutes = () => {
     return (
         <NavigationContainer>
@@ -41,3 +34,11 @@ const AppRoutes = () => {
 }
 
 export default AppRoutes
+
+// const MainTab = () => {
+//     <Tab.Navigator initialRouteName='Home'>
+//         <Tab.Screen name='Home' component={Home} />
+//         <Tab.Screen name='Galerie' component={Galerie} />
+//     </Tab.Navigator>
+// }
+

@@ -2,10 +2,8 @@ import { StyleSheet, Text, View, Dimensions, Image, Pressable } from 'react-nati
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 
-
 import NavBar from '../../components/NavBar';
 import ImageGalerie from '../../components/ImageGalerie';
-
 
 const Galerie = () => {
     const navigation = useNavigation();
@@ -13,7 +11,6 @@ const Galerie = () => {
     const screenHeight = Dimensions.get('window').height;
     return (
         <View style={[styles.container, { width: screenWidth, height: screenHeight }]}>
-            
             <View style={styles.containerTop}>
                 <View style={styles.edentImage}>
                     <Pressable onPress={() => navigation.navigate('Home')}>
@@ -22,8 +19,7 @@ const Galerie = () => {
                             source={require('../../../assets/returne.png')}
                         />
                     </Pressable>
-                </View>
-                    
+                </View> 
                 <View style={styles.containerImage}>
                     <Image
                         style={styles.imageLogo}
@@ -31,8 +27,7 @@ const Galerie = () => {
                     />
                 </View>
             </View>
-            
-
+    
             <View style={styles.edentText}>
                 <Image
                     style={styles.imageSecao}

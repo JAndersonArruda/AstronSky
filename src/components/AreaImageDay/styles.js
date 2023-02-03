@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     containerImage: {
         width: 330,
         height: 520,
-        marginTop: 8,
+        marginTop: 3,
         borderRadius: 20,
         marginLeft: 16,
     },
